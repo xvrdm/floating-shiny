@@ -1,6 +1,8 @@
 FROM xvrdm/ubuntu-16.04
 MAINTAINER Xavier Adam <xaad@protonmail.com>
 
+RUN apt-get install libcairo2-dev
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 RUN echo 'deb http://stat.ethz.ch/CRAN/bin/linux/ubuntu xenial/' | \
     tee -a /etc/apt/sources.list
